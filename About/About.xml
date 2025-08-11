@@ -1,24 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>[KV] Impassable Map Maker</name>
-	<author>Kiame Vivacity</author>
-	<url>https://ludeon.com/forums/index.php?topic=31379.0</url>
-    <supportedVersions>
-        <li>1.0</li>
-        <li>1.1</li>
-        <li>1.2</li>
-        <li>1.3</li>
-        <li>1.4</li>
-        <li>1.5</li>
-    </supportedVersions>
-	<packageId>impassablemapmaker.kv.rw</packageId>
-	<description>Allows settlements on Impassable tiles.</description>
-<modDependencies>
+  <name>[KV] Impassable Map Maker (Continued)</name>
+  <packageId>Mlie.KVImpassableMapMaker</packageId>
+  <author>Kiame Vivacity</author>
+  <url>https://github.com/emipa606/KVImpassableMapMaker</url>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+    <li>1.3</li>
+    <li>1.4</li>
+    <li>1.5</li>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
     <li>
-        <packageId>brrainz.harmony</packageId>
-        <displayName>Harmony</displayName>
-        <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-        <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
     </li>
-</modDependencies>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of Kiame Vivacitys mod https://steamcommunity.com/sharedfiles/filedetails/?id=1180719335
+
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/KVImpassableMapMaker][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/h5VwTNL.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+Allows settlements on Impassable tiles.
+
+Can either start a new game on an Impassable tile or with a current game travel (via caravan or drop ship) to an impassable tile.
+
+Impassable maps will have one open area somewhere in the mountain (it will be hidden initially). This is intended to add something a little different.
+
+There are also ruins and ancient dangers buried deep within the impassable mountains.
+
+World pathing will still avoid Impassable tiles but telling a caravan to travel to an Impassable tile will force them to go there. It takes a long time to get to an impassable tile by foot.
+
+
+Settings:
+-[b]World Map Movement Difficulty[/b] - How long it takes to cross an impassable tile on the world map
+-[b]Mountain Shape[/b] - Whether the impassable mountain is [u]Square[/u] or [u]Round[/u]
+--[b]Outer Radius[/b] (Round only) - The radius of the impassable mountain
+-[b]Scattered Rocks[/b] - Whether there are rocks scattered around the perimeter of the impassable mountain
+-[b]Has Middle Area[/b] - Whether there is an open area in the middle of the impassable mountain
+--[b]Middle Area Shape[/b] (Middle Area only) - The shape of the open area in the middle of the impassable mountain
+--[b]Open-Area Width/Height or Radius[/b] - The size of the open area in the middle of the impassable mountain
+--[b]Open-Area Max Offset From Middle[/b] (Middle Area only) - The possible max distance from the center that the center of the open-area can be at map generation
+--[b]Middle Area Wall Smoothness[/b] (Middle Area only) - Whether the walls of the middle area are smooth or rough
+-[b]Edge Buffer[/b] - In the case that the impassable map's outer walls go past the map's edge, should there be a buffer along the edge of the map to allow passage around the impassable map.
+NOTE: There will always be a small opening on the four corners of the map
+-[b]Include Quarry[/b] - Specifically for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2007576583]Quarry mod[/url]
+-[b]True Random[/b] - Every time an impassable map is generated it will be unique. This is unlike base-game behaviour in which the map will be the same if the same world-name and location are used.
+
+
+[b]Incompatible Mods:[/b]
+- Map ReRoll - appears to cause issues if the map is rerolled
+
+
+Ludeon Studios: https://ludeon.com/forums/index.php?topic=31379.0
+
+GitHub: https://github.com/KiameV/rimworld-impassablemapmaker/
+
+Direct Download:
+https://github.com/KiameV/rimworld-impassablemapmaker/releases/download/1.3/ImpassableMapMaker.zip
+
+
+Like my mods? Consider supporting me!
+[url=https://ko-fi.com/kiamev][img]https://i.imgur.com/i08683D.png[/img][/url]
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
+[/list]</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.1</modVersion>
 </ModMetaData>

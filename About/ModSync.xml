@@ -1,12 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModSyncNinjaData>
-  <ModName>Impassable Map Maker</ModName>
-  <Version>1.5.0.0</Version>
+  <ID>5fa3801f-6ea4-4471-8ca1-c3278080eb7d</ID>
+  <ModName>[KV] Impassable Map Maker (Continued)</ModName>
+  <Version>1.6.1</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
-    <Owner>KiameV</Owner>
-    <Project>rimworld-impassablemapmaker</Project>
-    <DownloadFrom>ModSyncReleases</DownloadFrom>
+    <Owner>emipa606</Owner>
+    <Project>KVImpassableMapMaker</Project>
+    <AboutDir>About</AboutDir>
+    <DownloadFrom>ModSyncMainPage</DownloadFrom>
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
+
+
+
+
+
