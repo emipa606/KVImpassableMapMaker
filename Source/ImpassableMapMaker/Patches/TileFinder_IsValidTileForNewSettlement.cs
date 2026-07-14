@@ -2,6 +2,7 @@
 using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
+using RimWorld.QuestGen;
 using Verse;
 
 namespace ImpassableMapMaker;
@@ -18,6 +19,11 @@ internal static class TileFinder_IsValidTileForNewSettlement
         }
 
         if (Find.WorldGrid[tile].hilliness != Hilliness.Impassable)
+        {
+            return;
+        }
+
+        if (Settings.NoQuestsOnImpassable && QuestGen.quest != null)
         {
             return;
         }

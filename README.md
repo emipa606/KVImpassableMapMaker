@@ -1,12 +1,12 @@
-# [[KV] Impassable Map Maker (Continued)]()
+# [[KV] Impassable Map Maker (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3547048994)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Kiame Vivacitys mod https://steamcommunity.com/sharedfiles/filedetails/?id=1180719335
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 Allows settlements on Impassable tiles.
 
@@ -41,25 +41,19 @@ NOTE: There will always be a small opening on the four corners of the map
 
 Ludeon Studios: https://ludeon.com/forums/index.php?topic=31379.0
 
-GitHub: https://github.com/KiameV/rimworld-impassablemapmaker/
 
-Direct Download:
-https://github.com/KiameV/rimworld-impassablemapmaker/releases/download/1.3/ImpassableMapMaker.zip
-
-
-Like my mods? Consider supporting me!
-[![Image](https://i.imgur.com/i08683D.png)](https://ko-fi.com/kiamev)
-
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
+[![Image](https://img.shields.io/github/v/release/emipa606/KVImpassableMapMaker?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3547048994) | tags: settlements, mountains

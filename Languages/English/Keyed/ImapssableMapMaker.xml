@@ -24,12 +24,13 @@
   <ImpassableMapMaker.Smaller>Smaller</ImpassableMapMaker.Smaller>
   <ImpassableMapMaker.Larger>Larger</ImpassableMapMaker.Larger>
   <ImpassableMapMaker.EdgeBufferWarning>6 seems to be the minimum for functional play.</ImpassableMapMaker.EdgeBufferWarning>
-  <ImpassableMapMaker.MiddleOpeningWallSmoothnes>Middle Area Wall Smoothnes</ImpassableMapMaker.MiddleOpeningWallSmoothnes>
+  <ImpassableMapMaker.MiddleOpeningWallSmoothnes>Middle Area Wall Smoothness</ImpassableMapMaker.MiddleOpeningWallSmoothnes>
   <ImpassableMapMaker.Smooth>Smooth</ImpassableMapMaker.Smooth>
   <ImpassableMapMaker.Rough>Rough</ImpassableMapMaker.Rough>
-  <ImpassableMapMaker.IncludeQuarySpot>Include Quary Spot</ImpassableMapMaker.IncludeQuarySpot>
+  <ImpassableMapMaker.IncludeQuarySpot>Include Quarry Spot</ImpassableMapMaker.IncludeQuarySpot>
   <ImpassableMapMaker.Default>Default</ImpassableMapMaker.Default>
   <ImpassableMapMaker.TrueRandom>True Random</ImpassableMapMaker.TrueRandom>
   <ImpassableMapMaker.CurrentModVersion>Installed mod-version: {0}</ImpassableMapMaker.CurrentModVersion>
   <ImpassableMapMaker.TrueRandomDesc>Will always produce a different map even if the tile is selected from the same world</ImpassableMapMaker.TrueRandomDesc>
+  <ImpassableMapMaker.NoQuestsOnImpassable>No quests on impassable tiles</ImpassableMapMaker.NoQuestsOnImpassable>
 </LanguageData>

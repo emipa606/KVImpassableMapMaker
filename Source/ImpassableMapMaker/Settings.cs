@@ -29,6 +29,7 @@ public class Settings : ModSettings
     public static ImpassableShape OuterShape = ImpassableShape.Square;
     public static bool ScatteredRocks = true;
     public static bool IncludeQuarrySpot;
+    public static bool NoQuestsOnImpassable;
     public static int OuterRadius = 1;
     public static int RoofEdgeDepth = 5;
     public static bool CoverRoadAndRiver;
@@ -51,6 +52,7 @@ public class Settings : ModSettings
         Scribe_Values.Look(ref openAreaShape, "ImpassableMapMaker.OpenAreaShape", nameof(ImpassableShape.Square));
         Scribe_Values.Look(ref OpenAreaSizeX, "ImpassableMapMaker.OpenAreaSizeX", DefaultOpenAreaSize);
         Scribe_Values.Look(ref OpenAreaSizeZ, "ImpassableMapMaker.OpenAreaSizeZ", DefaultOpenAreaSize);
+        Scribe_Values.Look(ref NoQuestsOnImpassable, "ImpassableMapMaker.NoQuestsOnImpassable");
         Scribe_Values.Look(ref PerimeterBuffer, "ImpassableMapMaker.PeremeterBuffer", DefaultPeremeterBuffer);
         Scribe_Values.Look(ref MiddleWallSmoothness, "ImpassableMapMaker.MakeWallsSmooth", DefaultWallsSmoothness);
         Scribe_Values.Look(ref s, "ImpassableMapMaker.Shape", nameof(ImpassableShape.Square));
@@ -156,6 +158,7 @@ public class Settings : ModSettings
         }
 
         ls.CheckboxLabeled("ImpassableMapMaker.ScatteredRocks".Translate(), ref ScatteredRocks);
+        ls.CheckboxLabeled("ImpassableMapMaker.NoQuestsOnImpassable".Translate(), ref NoQuestsOnImpassable);
         ls.GapLine(GapSize);
 
         // Middle Area
