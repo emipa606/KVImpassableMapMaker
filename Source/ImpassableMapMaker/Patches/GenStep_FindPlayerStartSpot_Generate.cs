@@ -11,7 +11,7 @@ internal static class GenStep_FindPlayerStartSpot_Generate
 {
     public static ITerrainOverride QuestArea = null;
 
-    private static void Postfix(Map map)
+    public static void Postfix(Map map)
     {
         if (map.TileInfo.hilliness != Hilliness.Impassable ||
             GenStep_ElevationFertility_Generate.MiddleAreaCenter == null ||

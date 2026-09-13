@@ -8,12 +8,12 @@ using Verse;
 namespace ImpassableMapMaker;
 
 [HarmonyPatch(typeof(MapGenerator), nameof(MapGenerator.GenerateMap))]
-public class MapGenerator_GenerateMap
+public static class MapGenerator_GenerateMap
 {
     public static bool IsQuestMap;
 
     [HarmonyPriority(Priority.First)]
-    private static void Prefix(MapParent parent, MapGeneratorDef mapGenerator,
+    public static void Prefix(MapParent parent, MapGeneratorDef mapGenerator,
         IEnumerable<GenStepWithParams> extraGenStepDefs)
     {
         SettleInEmptyTileUtility_Settle.Prefix();
@@ -67,7 +67,7 @@ public class MapGenerator_GenerateMap
     }
 
     [HarmonyPriority(Priority.First)]
-    private static void Postfix(ref Map __result)
+    public static void Postfix(ref Map __result)
     {
         if (__result.TileInfo.hilliness != Hilliness.Impassable || Settings.OuterShape != ImpassableShape.Fill)
         {
@@ -90,15 +90,12 @@ public class MapGenerator_GenerateMap
                 __result.roofGrid.SetRoof(current, RoofDefOf.RoofRockThick);
             }
 
-            if (Settings.RoofEdgeDepth > 0)
+            if (Settings.RoofEdgeDepth > 0 && (current.x == 0 ||
+                                               current.x == maxX ||
+                                               current.z == 0 ||
+                                               current.z == maxZ))
             {
-                if (current.x == 0 ||
-                    current.x == maxX ||
-                    current.z == 0 ||
-                    current.z == maxZ)
-                {
-                    __result.roofGrid.SetRoof(current, null);
-                }
+                __result.roofGrid.SetRoof(current, null);
             }
 
             if (!Settings.HasMiddleArea)
@@ -106,20 +103,22 @@ public class MapGenerator_GenerateMap
                 for (var x = Math.Max(0, MapGenerator.PlayerStartSpot.x - 5);
                      x < Math.Min(__result.Size.x, MapGenerator.PlayerStartSpot.x + 5);
                      ++x)
-                for (var z = Math.Max(0, MapGenerator.PlayerStartSpot.z - 5);
-                     z < Math.Min(__result.Size.z, MapGenerator.PlayerStartSpot.z + 5);
-                     ++z)
                 {
-                    var i = new IntVec3(x, 0, z);
-                    foreach (var t in __result.thingGrid.ThingsAt(i))
+                    for (var z = Math.Max(0, MapGenerator.PlayerStartSpot.z - 5);
+                         z < Math.Min(__result.Size.z, MapGenerator.PlayerStartSpot.z + 5);
+                         ++z)
                     {
-                        if (t.def.passability == Traversability.Impassable)
+                        var i = new IntVec3(x, 0, z);
+                        foreach (var t in __result.thingGrid.ThingsAt(i))
                         {
-                            t.Destroy();
+                            if (t.def.passability == Traversability.Impassable)
+                            {
+                                t.Destroy();
+                            }
                         }
-                    }
 
-                    __result.roofGrid.SetRoof(i, null);
+                        __result.roofGrid.SetRoof(i, null);
+                    }
                 }
             }
             else

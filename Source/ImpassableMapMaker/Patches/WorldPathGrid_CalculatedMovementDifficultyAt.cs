@@ -8,7 +8,7 @@ namespace ImpassableMapMaker;
 [HarmonyPatch(typeof(WorldPathGrid), nameof(WorldPathGrid.CalculatedMovementDifficultyAt))]
 internal static class WorldPathGrid_CalculatedMovementDifficultyAt
 {
-    private static bool Prefix(ref float __result, PlanetTile tile, int? ticksAbs = null,
+    public static bool Prefix(ref float __result, PlanetTile tile, int? ticksAbs = null,
         StringBuilder explanation = null)
     {
         var tile2 = Find.WorldGrid[tile];

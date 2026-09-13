@@ -10,7 +10,7 @@ namespace ImpassableMapMaker;
 internal static class CaravanEnterMapUtility_Enter
 {
     [HarmonyPriority(Priority.First)]
-    private static void Prefix(Map map, ref CaravanEnterMode enterMode, bool draftColonists)
+    public static void Prefix(Map map, ref CaravanEnterMode enterMode, bool draftColonists)
     {
         if (map.TileInfo.hilliness != Hilliness.Impassable)
         {

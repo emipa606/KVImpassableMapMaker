@@ -1,54 +1,39 @@
-# GitHub Copilot Instructions for [KV] Impassable Map Maker (Continued)
+# Copilot Instructions for [KV] Impassable Map Maker (Continued) Mod
 
 ## Mod Overview and Purpose
-
-The [KV] Impassable Map Maker (Continued) mod, originally created by Kiame Vivacity, enhances the gameplay of RimWorld by allowing players to create settlements on Impassable tiles. This update, continued by the community, provides an intriguing challenge by introducing unique elements and settings for players who settle in otherwise inaccessible areas.
+The [KV] Impassable Map Maker (Continued) mod enhances gameplay in RimWorld by allowing players to settle on and explore impassable map tiles. Originally developed by Kiame Vivacity, the mod has been updated to enable players to either start new games on impassable tiles or travel to them from existing games using caravans or drop ships. Impassable maps feature hidden open areas within the mountains, ruins, and ancient dangers, offering a novel and challenging experience. 
 
 ## Key Features and Systems
-
-- **Settlements on Impassable Tiles**: Players can settle on or travel to Impassable map tiles using caravans or drop ships.
-  
-- **Unique Map Elements**: Each Impassable map includes hidden open areas in the mountains and potential ruins or ancient dangers.
-
-- **World Pathing**: While AI pathing avoids Impassable tiles, players can force caravans to travel there, taking more time.
-
-- **Settings Customization**:
-  - **World Map Movement Difficulty**: Adjusts the time it takes to traverse an Impassable tile.
-  - **Mountain Shape**: Choose between Square or Round mountain shapes, with configurable radius for Round mountains.
-  - **Middle Area Settings**: Enable or disable an open area in the mountain with customizable shape, size, and wall smoothness.
-  - **Edge Buffer**: Allows room around map edges if the mountain walls extend past the map.
-  - **Quarry Integration**: Optionally include a quarry.
-  - **True Randomization**: Ensure unique map generation each time, even with the same world name and location.
-
-- **Incompatibility Note**: Known issues with the Map ReRoll mod.
+- **Impassable Tile Settlement**: Enables settlement on tiles traditionally impassable, providing fresh gameplay dynamics.
+- **Hidden Mountain Areas**: Each impassable map contains a concealed open area, which adds a layer of exploration and mystery.
+- **World Map Mechanics**: Allows caravans to travel to impassable tiles. However, world pathing generally avoids these tiles unless directed otherwise.
+- **Customizable Settings**: Players can configure various aspects of the map, such as mountain shape (Square/Round), presence of rocks, and middle open area specifications.
+- **Inclusivity with Quarry Mod**: Option to include a quarry in impassable maps.
+- **True Random Generation**: Ensures unique map generation each time, unlike the vanilla repetitive map layout.
 
 ## Coding Patterns and Conventions
-
-- **Structure**: The mod is organized into separate patches and utility classes, reflecting a clear separation of concerns.
-- **Patching**: Uses Harmony to apply changes non-invasively to the base game logic.
-- **Interfacing**: Implements interfaces such as `ITerrainOverride` to handle terrain modifications reliably.
+- **C# Programming**: The mod utilizes C# extensively for custom game logic. It follows common C# conventions such as PascalCase for method names and camelCase for local variables.
+- **Code Organization**: Classes are grouped into relevant files that handle specific functions. For instance, `HarmonyPatches.cs` is dedicated to all Harmony-related patches.
+- **Consistent Naming**: Classes and methods are named in relation to their functionality, aiding in readability and maintenance.
 
 ## XML Integration
-
-- **About.xml**: Contains metadata about the mod, listing dependencies such as `brrainz.harmony`.
-- **ModSync.xml**: Used for mod synchronization details.
-- **Version.xml**: Keeps versioning information for the mod.
+- **About.xml**: Defines basic mod information and dependencies, such as the requirement of brrainz.harmony.
+- **ModSync.xml and Version.xml**: Manage mod synchronization and version tracking.
+- XML files use a hierarchical structure to organize data logically and include necessary schema or dependencies.
 
 ## Harmony Patching
-
-- **GenStep_ScattererBestFit.cs**: This patch uses a Prefix method to customize scatter generation on Impassable maps.
-- **GenStep_FindPlayerStartSpot_Generate.cs**: Utilizes a Postfix method to modify the player starting spot generation for Impassable tiles.
-- **SettleInEmptyTileUtility_Settle.cs**: Includes Finally and Prefix methods to ensure that new settlements on Impassable tiles are handled correctly.
-- **TileFinder_IsValidTileForNewSettlement.cs**: Uses a Postfix method to adjust tile validation logic to accommodate Impassable tiles.
+- **Harmony**: The mod leverages Harmony for patching existing game functions. It uses Prefix, Postfix, and Finally where necessary to inject or modify game logic.
+- **Patch Locations**: Examples include `MapGenerator_GenerateMap.cs` for map generation customization and `GenStep_FindPlayerStartSpot_Generate.cs` for determining player start spots.
+- **Patch Structure**: Follows a systematic approach where each function intended for modification is clearly marked and structured for ease of future adjustments.
 
 ## Suggestions for Copilot
-
-- **Code Completion**: Assist in writing new patches for additional map features or customization settings.
-- **Refactoring**: Help refactor existing code for improved readability and performance without changing functionality.
-- **XML Enhancements**: Suggest additions or improvements to XML configurations for better integration with other mods or base game updates.
-- **Troubleshooting**: Provide suggestions for debugging incompatibilities, especially with other mods.
-
-This guide should assist in maintaining and expanding the functionality of the [KV] Impassable Map Maker (Continued) mod using best practices in C# and XML within the RimWorld modding framework.
+1. **Harmony Patches**: Generate Prefix, Postfix, and Finally patches using patterns from existing files, focusing on map initialization and pathing logic.
+2. **XML Template**: Use existing XML files as templates for creating new ones with structured data schemas, considering dependencies.
+3. **Modular Methods**: Propose methods that encapsulate distinct functionalities - like map settings retrieval or path adjustment algorithms.
+4. **Error Handling**: Suggest error-handling mechanisms in C# to ensure stability when the mod interacts with game APIs.
+5. **Custom Settings UI**: Recommend UI elements and logic to manage user settings in the mod, keeping in line with RimWorld's UI framework.
+   
+This comprehensive instruction aims to guide your development using GitHub Copilot, encapsulating the core components and conventions of the [KV] Impassable Map Maker mod. By adhering to these guidelines, Copilot assistance can enhance the mod's functionality, ensure code maintainability, and improve user experience.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -62,4 +47,6 @@ This guide should assist in maintaining and expanding the functionality of the [
 ## Hard rules (must follow)
 - Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
 - Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
 

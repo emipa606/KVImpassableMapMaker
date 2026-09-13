@@ -14,9 +14,8 @@ internal static class GenStep_ElevationFertility_Generate
     private static HashSet<string> middleAreaCells;
     public static ITerrainOverride QuestArea;
 
-    private static void Postfix(Map map)
+    public static void Postfix(Map map)
     {
-        //Log.Error($"Roof Edge: {Settings.RoofEdgeDepth}");
         MiddleAreaCenter = null;
         if (map.TileInfo.hilliness != Hilliness.Impassable)
         {
@@ -171,13 +170,10 @@ internal static class GenStep_ElevationFertility_Generate
         if (Settings.OuterShape == ImpassableShape.Round)
         {
             // Round
-            if (buffer != 0)
+            if (buffer != 0 && (i.x < buffer || i.x > map.Size.x - buffer - 1 ||
+                                i.z < buffer || i.z > map.Size.z - buffer - 1))
             {
-                if (i.x < buffer || i.x > map.Size.x - buffer - 1 ||
-                    i.z < buffer || i.z > map.Size.z - buffer - 1)
-                {
-                    return false;
-                }
+                return false;
             }
 
             var x = i.x - (int)(map.Size.x * 0.5f);

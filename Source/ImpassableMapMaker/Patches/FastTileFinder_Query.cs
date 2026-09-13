@@ -9,7 +9,7 @@ namespace ImpassableMapMaker;
 [HarmonyPatch(typeof(FastTileFinder), nameof(FastTileFinder.Query))]
 internal static class FastTileFinder_Query
 {
-    private static void Postfix(ref List<PlanetTile> __result)
+    public static void Postfix(ref List<PlanetTile> __result)
     {
         if (!Settings.NoQuestsOnImpassable || QuestGen.quest == null || __result is not { Count: > 0 })
         {

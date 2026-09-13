@@ -27,6 +27,8 @@
   <description>[img]https://img.litet.net/logos/Info.png[/img]
 Update of Kiame Vivacitys mod https://steamcommunity.com/sharedfiles/filedetails/?id=1180719335
 
+- Added option to not generate quests on impassable tiles
+
 [img]https://img.litet.net/logos/Notice.png[/img]
 
 [table]
@@ -84,6 +86,6 @@ Ludeon Studios: https://ludeon.com/forums/index.php?topic=31379.0
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list] 
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3547048994][img]https://img.shields.io/github/v/release/emipa606/KVImpassableMapMaker?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: settlements, mountains</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.2</modVersion>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3547048994][img]https://img.shields.io/github/v/release/emipa606/KVImpassableMapMaker?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | settlements, mountains</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.3</modVersion>
 </ModMetaData>

@@ -6,7 +6,7 @@ namespace ImpassableMapMaker;
 [HarmonyPatch(typeof(WorldPathGrid), "HillinessMovementDifficultyOffset")]
 internal static class WorldPathGrid_HillinessMovementDifficultyOffset
 {
-    private static void Postfix(ref float __result, Hilliness hilliness)
+    public static void Postfix(ref float __result, Hilliness hilliness)
     {
         if (hilliness == Hilliness.Impassable)
         {

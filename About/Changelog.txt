@@ -1,5 +1,8 @@
 # Changelog for KVImpassableMapMaker
 
+1.6.3 - Code cleanup
+
+
 1.6.2 - Added mod-option to not allow quests on impassable tiles
 Used DeepL to update translations for ChineseSimplified, French, German, Japanese
 

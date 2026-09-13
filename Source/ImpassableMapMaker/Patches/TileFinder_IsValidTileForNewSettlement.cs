@@ -11,7 +11,7 @@ namespace ImpassableMapMaker;
 internal static class TileFinder_IsValidTileForNewSettlement
 {
     [HarmonyPriority(Priority.First)]
-    private static void Postfix(ref bool __result, PlanetTile tile, StringBuilder reason)
+    public static void Postfix(ref bool __result, PlanetTile tile, StringBuilder reason)
     {
         if (__result)
         {

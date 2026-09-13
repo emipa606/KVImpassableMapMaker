@@ -8,7 +8,7 @@ namespace ImpassableMapMaker;
 internal static class GenStep_ScattererBestFit
 {
     [HarmonyPriority(Priority.First)]
-    private static bool Prefix(RimWorld.GenStep_ScattererBestFit __instance, ref bool __result, Map map,
+    public static bool Prefix(RimWorld.GenStep_ScattererBestFit __instance, ref bool __result, Map map,
         ref IntVec3 result)
     {
         if (!__instance.def.defName.Contains("Archonexus"))
