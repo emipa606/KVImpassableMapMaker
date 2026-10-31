@@ -58,4 +58,4 @@ Ludeon Studios: https://ludeon.com/forums/index.php?topic=31379.0
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/KVImpassableMapMaker?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3547048994) | settlements, mountains
+[![Image](https://img.shields.io/github/v/release/emipa606/KVImpassableMapMaker?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3547048994) | mountains, settlements
